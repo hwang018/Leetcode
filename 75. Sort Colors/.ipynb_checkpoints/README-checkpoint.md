@@ -11,3 +11,9 @@ Output: [0,0,1,1,2,2]
 
 Idea:
 Dutch National Flag problem
+Use 3 pointers to track low medium high regions.
+starting:
+p0 = 0, boundary of 0 elements
+p2 = end index, boundary of 2 elements
+p1, current index, will be tested
+each p1 will be tested to be 0 or 2, and exchange value with either p0 or p2.
