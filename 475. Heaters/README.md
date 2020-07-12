@@ -18,3 +18,7 @@ Input: [1,2,3],[2]
 Output: 1
 Explanation: The only heater was placed in the position 2, and if we use the radius 1 standard, then all the houses can be warmed.
 
+Idea:
+Each house will be assigned to a heater (neatest), for each house, it will be either assigned to heater j or heater j+1
+therefore, there will be at most 2 distance for each house, the min_distance for this house will be stored, as the minimum requirement for this house to be covered. (house at both ends will only have 1 distance).
+Then take the max of all houses' min_distance will yield answer.
