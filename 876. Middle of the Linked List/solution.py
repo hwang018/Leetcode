@@ -1,11 +1,10 @@
 import argparse
-def main(arr):
-    class ListNode:
+class ListNode:
         def __init__(self, val=0, next=None):
             self.val = val
             self.next = next
 
-    def arr2lst(arr):
+def arr2lst(arr):
         '''
         convert array to linked list
         :param arr:
@@ -17,7 +16,7 @@ def main(arr):
             curr = curr.next
         return dummy.next
 
-    def middleNode(head: ListNode) -> ListNode:
+def middleNode(head: ListNode) -> ListNode:
         #create 2 pointers, fast is 2 times speed of slow
         slow = fast = head
         while fast and fast.next:
@@ -26,11 +25,12 @@ def main(arr):
             fast = fast.next.next
         return slow
 
+def main(arr):
+    # create a linked list from given arr
     head = arr2lst(arr)
-    print(middleNode(head).val)
-
-    return None
+    return middleNode(head).val
 
 if __name__ == "__main__":
     arr = [1,5,6,3,3,4,6,8]
-    main(arr)
+    res = main(arr)
+    print(res)
